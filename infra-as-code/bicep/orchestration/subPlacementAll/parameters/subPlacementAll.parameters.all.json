@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "parTopLevelManagementGroupPrefix": {
-      "value": "alz"
+      "value": "eslz"
     },
     "parIntRootMgSubs": {
       "value": []
@@ -12,19 +12,19 @@
       "value": []
     },
     "parPlatformManagementMgSubs": {
-      "value": []
+      "value": ["managementsubid"]
     },
     "parPlatformConnectivityMgSubs": {
       "value": []
     },
     "parPlatformIdentityMgSubs": {
-      "value": []
+      "value": ["identitysubid"]
     },
     "parLandingZonesMgSubs": {
       "value": []
     },
     "parLandingZonesCorpMgSubs": {
-      "value": []
+      "value": ["corpsubid"]
     },
     "parLandingZonesOnlineMgSubs": {
       "value": []
