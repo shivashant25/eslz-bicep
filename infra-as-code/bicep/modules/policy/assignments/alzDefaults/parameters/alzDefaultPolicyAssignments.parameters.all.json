@@ -9,7 +9,7 @@
             "value": "centralus"
         },
         "parLogAnalyticsWorkspaceResourceId": {
-            "value": "/subscriptions/a5932f36-63c8-4bc7-b97a-f90a2900b8a1/resourceGroups/alz-logging/providers/Microsoft.OperationalInsights/workspaces/eslz-law"
+            "value": "logid"
         },
         "parLogAnalyticsWorkspaceLogRetentionInDays": {
             "value": "30"
@@ -21,7 +21,7 @@
             "value": "security_contact@replace_me.com"
         },
         "parDdosProtectionPlanId": {
-            "value": "/subscriptions/a5932f36-63c8-4bc7-b97a-f90a2900b8a1/resourceGroups/Hub_Networking_POC/providers/Microsoft.Network/ddosProtectionPlans/eslz-ddos-plan"
+            "value": "ddosid"
         },
         "parTelemetryOptOut": {
             "value": false
