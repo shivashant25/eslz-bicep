@@ -9,7 +9,7 @@
       "value": "eslz"
     },
     "parPeeredVnetSubscriptionId": {
-      "value": "a5932f36-63c8-4bc7-b97a-f90a2900b8a1"
+      "value": "connectivitysubid"
     },
     "parPeeredVnetSubscriptionMgPlacement": {
       "value": "eslz-platform-connectivity"
@@ -36,7 +36,7 @@
       "value": "rtb-spoke-to-hub"
     },
     "parHubVirtualNetworkId": {
-      "value": "/subscriptions/a5932f36-63c8-4bc7-b97a-f90a2900b8a1/resourceGroups/eslz_Hub_Networking/providers/Microsoft.Network/virtualNetworks/eslz-hub-centralus"
+      "value": "hubvnetid"
     },
     "parAllowSpokeForwardedTraffic": {
       "value": false
