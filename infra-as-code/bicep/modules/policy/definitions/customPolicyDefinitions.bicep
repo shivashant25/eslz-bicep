@@ -207,10 +207,6 @@ var varCustomPolicyDefinitionsArray = [
     libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_avdscalingplans.json'))
   }
   {
-    name: 'Deploy-Diagnostics-CDNEndpoints'
-    libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_cdnendpoints.json'))
-  }
-  {
     name: 'Deploy-Diagnostics-CognitiveServices'
     libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_cognitiveservices.json'))
   }
@@ -548,11 +544,6 @@ var varCustomPolicySetDefinitionsArray = [
         definitionReferenceId: 'AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics'
         definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-AVDScalingPlans'
         definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics.parameters
-      }
-      {
-        definitionReferenceId: 'BastionDeployDiagnosticLogDeployLogAnalytics'
-        definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-Bastion'
-        definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.BastionDeployDiagnosticLogDeployLogAnalytics.parameters
       }
       {
         definitionReferenceId: 'CDNEndpointsDeployDiagnosticLogDeployLogAnalytics'
