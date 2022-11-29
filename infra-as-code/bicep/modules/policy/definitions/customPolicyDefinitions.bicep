@@ -207,14 +207,6 @@ var varCustomPolicyDefinitionsArray = [
     libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_avdscalingplans.json'))
   }
   {
-    name: 'Deploy-Diagnostics-Bastion'
-    libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_bastion.json'))
-  }
-  {
-    name: 'Deploy-Diagnostics-CDNEndpoints'
-    libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_cdnendpoints.json'))
-  }
-  {
     name: 'Deploy-Diagnostics-CognitiveServices'
     libDefinition: json(loadTextContent('lib/policy_definitions/policy_definition_es_deploy_diagnostics_cognitiveservices.json'))
   }
@@ -552,16 +544,6 @@ var varCustomPolicySetDefinitionsArray = [
         definitionReferenceId: 'AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics'
         definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-AVDScalingPlans'
         definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics.parameters
-      }
-      {
-        definitionReferenceId: 'BastionDeployDiagnosticLogDeployLogAnalytics'
-        definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-Bastion'
-        definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.BastionDeployDiagnosticLogDeployLogAnalytics.parameters
-      }
-      {
-        definitionReferenceId: 'BatchDeployDiagnosticLogDeployLogAnalytics'
-        definitionId: '/providers/Microsoft.Authorization/policyDefinitions/c84e5349-db6d-4769-805e-e14037dab9b5'
-        definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.BatchDeployDiagnosticLogDeployLogAnalytics.parameters
       }
       {
         definitionReferenceId: 'CDNEndpointsDeployDiagnosticLogDeployLogAnalytics'
