@@ -159,6 +159,10 @@ var varCustomPolicyDefinitionsArray = [
     libDefinition: json(loadTextContent('lib/china/policy_definitions/policy_definition_es_mc_deploy_diagnostics_applicationgateway.json'))
   }
   {
+    name: 'Deploy-Diagnostics-Bastion'
+    libDefinition: json(loadTextContent('lib/china/policy_definitions/policy_definition_es_mc_deploy_diagnostics_bastion.json'))
+  }
+  {
     name: 'Deploy-Diagnostics-CDNEndpoints'
     libDefinition: json(loadTextContent('lib/china/policy_definitions/policy_definition_es_mc_deploy_diagnostics_cdnendpoints.json'))
   }
@@ -510,6 +514,11 @@ var varCustomPolicySetDefinitionsArray = [
         definitionReferenceId: 'AVDHostPoolsDeployDiagnosticLogDeployLogAnalytics'
         definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-WVDHostPools'
         definitionParameters: varPolicySetDefinitionEsMcDeployDiagnosticsLoganalyticsParameters.AVDHostPoolsDeployDiagnosticLogDeployLogAnalytics.parameters
+      }
+      {
+        definitionReferenceId: 'BastionDeployDiagnosticLogDeployLogAnalytics'
+        definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-Bastion'
+        definitionParameters: varPolicySetDefinitionEsMcDeployDiagnosticsLoganalyticsParameters.BastionDeployDiagnosticLogDeployLogAnalytics.parameters
       }
       {
         definitionReferenceId: 'BatchDeployDiagnosticLogDeployLogAnalytics'
