@@ -553,7 +553,7 @@ var varCustomPolicySetDefinitionsArray = [
         definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-AVDScalingPlans'
         definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.AVDScalingPlansDeployDiagnosticLogDeployLogAnalytics.parameters
       }
-          {
+      {
         definitionReferenceId: 'BastionDeployDiagnosticLogDeployLogAnalytics'
         definitionId: '${varTargetManagementGroupResourceId}/providers/Microsoft.Authorization/policyDefinitions/Deploy-Diagnostics-Bastion'
         definitionParameters: varPolicySetDefinitionEsDeployDiagnosticsLoganalyticsParameters.BastionDeployDiagnosticLogDeployLogAnalytics.parameters

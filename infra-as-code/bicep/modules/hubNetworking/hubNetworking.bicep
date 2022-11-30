@@ -12,7 +12,7 @@ param parHubNetworkAddressPrefix string = '10.10.0.0/16'
 
 @description('The name and IP address range for each subnet in the virtual networks. Default: AzureBastionSubnet, GatewaySubnet, AzureFirewall Subnet')
 param parSubnets array = [
-   {
+  {
     name: 'AzureBastionSubnet'
     ipAddressRange: '10.10.15.0/24'
   }
@@ -47,6 +47,7 @@ param parAzBastionSku string = 'Standard'
 
 @description('NSG Name for Azure Bastion Subnet NSG. Default: nsg-AzureBastionSubnet')
 param parAzBastionNsgName string = 'nsg-AzureBastionSubnet'
+
 @description('Switch to enable/disable DDoS Standard deployment. Default: true')
 param parDdosEnabled bool = true
 
@@ -199,8 +200,6 @@ param parTags object = {}
 
 @description('Set Parameter to true to Opt-out of deployment telemetry')
 param parTelemetryOptOut bool = false
-]
-
 
 var varSubnetProperties = [for subnet in parSubnets: {
   name: subnet.name
@@ -211,6 +210,7 @@ var varSubnetProperties = [for subnet in parSubnets: {
     }
   }
 }]
+
 var varVpnGwConfig = ((!empty(parVpnGatewayConfig)) ? parVpnGatewayConfig : json('{"name": "noconfigVpn"}'))
 
 var varErGwConfig = ((!empty(parExpressRouteGatewayConfig)) ? parExpressRouteGatewayConfig : json('{"name": "noconfigEr"}'))
@@ -401,10 +401,10 @@ resource resBastionNsg 'Microsoft.Network/networkSecurityGroups@2021-08-01' = {
     ]
   }
 }
+
 // AzureBastionSubnet is required to deploy Bastion service. This subnet must exist in the parsubnets array if you enable Bastion Service.
 // There is a minimum subnet requirement of /27 prefix.  
 // If you are deploying standard this needs to be larger. https://docs.microsoft.com/en-us/azure/bastion/configuration-settings#subnet
-
 resource resBastion 'Microsoft.Network/bastionHosts@2021-08-01' = if (parAzBastionEnabled) {
   location: parLocation
   name: parAzBastionName
@@ -429,6 +429,7 @@ resource resBastion 'Microsoft.Network/bastionHosts@2021-08-01' = if (parAzBasti
     ]
   }
 }
+
 resource resGatewaySubnetRef 'Microsoft.Network/virtualNetworks/subnets@2021-08-01' existing = {
   parent: resHubVnet
   name: 'GatewaySubnet'
